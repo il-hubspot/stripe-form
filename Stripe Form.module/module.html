@@ -1,0 +1,28 @@
+{% set mid = module|pprint|md5 %}
+
+{% set token_key = module.token_key %}
+{% set token_key_md5 = token_key|md5 %}
+
+{% set token = module.payment_description ~ "|" ~ (module.amount_in_us_dollars * 100)|string ~ "|" ~ unixtimestamp()|string %}
+{% set signature = (token_key_md5 ~ (token_key ~ token ~ token_key)|md5 ~ token_key_md5) | md5 %}
+
+<div class="stripe-form stripe-form-{{ mid }}" id="stripe-form-{{ mid }}" data-module-id="{{ mid }}">
+  <script>
+    window.__stripeForm = window.__stripeForm || {};
+    window.__stripeForm["{{ mid }}"{##}] = {
+      portalId: "{{ portal_id }}",
+      formId: "{{ module.payment_form.form_id }}",
+      responseType: "{{ module.payment_form.response_type }}",
+      message: "{{ module.payment_form.message|escapejson }}",
+      redirectUrl: "{{ (module.payment_form.redirect_url or content_by_id(module.payment_form.redirect_id).absolute_url) | escapejson }}",
+      stripeKey: "{{ module.stripe_public_key }}",
+      token: "{{ token }}",
+      signature: "{{ signature }}",
+      apiUrl: "{{ module.api_url }}",
+      gtwKey: "{{ module.payment_form.gotowebinar_webinar_key }}"
+    };
+  </script>
+</div>
+
+{{ require_js("https://js.stripe.com/v3/", "footer") }}
+{{ require_js("//js.hsforms.net/forms/v2.js", "footer") }}

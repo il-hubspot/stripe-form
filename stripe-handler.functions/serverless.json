@@ -1,0 +1,13 @@
+{
+  "runtime": "nodejs12.x",
+  "version": "1.0",
+  "environment": {
+  },
+  "secrets": ["STRIPE_API_KEY", "STRIPE_TOKEN_KEY"],
+  "endpoints": {
+    "payment-intent": {
+      "method": "POST",
+      "file": "get-payment-intent.js"
+    }
+  }
+}

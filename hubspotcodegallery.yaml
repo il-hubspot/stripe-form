@@ -1,9 +1,9 @@
-title: Code Gallery Sample Entry
+title: Stripe Form
 description: |
-  Code
+  Accept payment via Stripe from a simple form!
 type: module
-categories: Menus and navigation, Galleries, Buttons
-demo_url: https://example.com/demo
-video_url: https://example.com/video
-hubspot_url: https://marketplace.hubspot.com/path/to/listing
+categories: Interaction, Payment
+demo_url: https://w.inboundlabs.co/stripe-form-test
+video_url: https://cdn2.hubspot.net/hubfs/346178/Stripe%20Form%20Demo.mp4
+hubspot_url: https://app.hubspot.com/marketplace/346178/products/inboundlabs/stripe-form
 

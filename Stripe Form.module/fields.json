@@ -1,0 +1,71 @@
+[ {
+  "id" : "7bc24eba-1fd9-ecf5-b1cf-8794b9192481",
+  "name" : "payment_form",
+  "label" : "Payment form",
+  "required" : true,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form."
+  }
+}, {
+  "id" : "0fda9d22-4b91-f708-acb3-023a64b5afd2",
+  "name" : "amount_in_us_dollars",
+  "label" : "Amount in US Dollars",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 0.01,
+  "step" : 1,
+  "type" : "number",
+  "default" : 100
+}, {
+  "id" : "46cc19d9-ee3e-e7e7-52e0-1c191de42bb2",
+  "name" : "payment_description",
+  "label" : "Payment description",
+  "help_text" : "Description of the payment. This will appear on Stripe dashboard.",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Item"
+}, {
+  "id" : "5b8b7018-813f-cd88-a0cb-9f23e5bdd821",
+  "name" : "stripe_public_key",
+  "label" : "Stripe public key",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "pk_test_y8eBjoFv1Di6TVq2tbmdtKCl00WQYdkQfu"
+}, {
+  "id" : "1296479b-7e83-bbba-0158-62b5265b277b",
+  "name" : "token_key",
+  "label" : "Token key",
+  "help_text" : "Please get this key from InboundLabs",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Nf8Ka65V7lrXf9CttzXspLjclJGjDsJp"
+}, {
+  "id" : "6389ebe7-479d-bb2d-6895-bf1c88c3dbcf",
+  "name" : "api_url",
+  "label" : "API URL",
+  "help_text" : "Please get this URL from InboundLabs",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "/_hcms/api/payment-intent"
+} ]

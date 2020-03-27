@@ -1,17 +1,13 @@
 {
   "content_tags" : [ ],
   "css_assets" : [ ],
-  "editable_contexts" : [ ],
   "external_js" : [ ],
   "extra_classes" : "",
   "global" : false,
-  "help_text" : "",
-  "host_template_types" : [ "PAGE" ],
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "icon" : "https://cdn2.hubspot.net/hubfs/346178/logo-default.svg",
   "js_assets" : [ ],
-  "label" : null,
   "other_assets" : [ ],
-  "placement_rules" : [ ],
   "smart_type" : "NOT_SMART",
-  "tags" : [ ],
   "is_available_for_new_content" : true
 }
